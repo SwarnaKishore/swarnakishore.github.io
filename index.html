@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/pavuv/1/edit
+-->
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+<link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script><script src="http://code.jquery.com/jquery-git2.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Joti+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
+  
+  <link href='http://fonts.googleapis.com/css?family=Joti+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sniglet' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+
+<style id="jsbin-css">
+body
+{
+  
+  
+  
+  background-image: url("http://static.wixstatic.com/media/84770f_c87cb4c11e87d9c76c0902ed33ca483f.jpg_srz_p_1920_1145_75_22_0.50_1.20_0.00_jpg_srz");
+  
+}
+
+.mainHeader
+{
+background-color: rgb(159, 0, 62);
+position: absolute;
+top: 1px;
+  left:0px;
+min-width: 1904px;
+min-height: 115px;
+position: absolute;
+border-bottom: 5px solid rgb(205, 9, 0);
+  
+}
+#main1
+{
+
+font-size: 36px;
+color: rgb(254, 212, 0);
+position:absolute;
+left:280px;
+bottom:40px;
+  font-family: 'Trade Winds', cursive;
+
+}
+#main2
+{
+font-size:20px;
+color: rgb(254, 212, 0);
+position:absolute;
+left:280px;
+bottom:14px;
+font-family: 'Joti One', cursive; 
+}
+#navigation
+{
+
+float: left;
+left: 750px;
+top: 50px;
+min-height: 25px;
+position: absolute;
+}
+#navigation ul li
+{
+	list-style-type: none;
+	float: left;
+}
+
+
+#navigation ul li a
+{
+	display: block;
+	float: left;
+	padding: 7px 15px;
+    text-decoration: none;
+	color: white;
+  font-family: 'Joti One', cursive;
+ 
+ font-size:17px;
+   
+}
+
+
+
+#navigation li a:hover { color: rgb(254, 212, 0); }
+
+
+
+
+
+.footer
+{
+position: absolute;
+width: 100%;
+padding:5px;
+  
+  left:0px;
+  
+}
+
+
+
+.centeredContent
+{
+  
+background-color: rgb(159, 0, 62) ;
+color:rgb(254, 212, 0);
+ height:50px;
+  
+  padding:5px;
+ 
+}
+
+.centeredContent p
+{
+  position:relative;
+  top:10px;
+  text-align:center;
+}
+
+
+.videoContainer
+{
+  
+  margin-left:23%;
+  width:980px;
+    
+  height:1980px;
+  background-color: rgb(159, 0, 62);
+}
+.videoContainer h3,p
+{
+  position:relative;
+  color:rgb(254, 212, 0);
+  left:160px;
+  top:150px;
+  font-family: 'Nova Square', cursive;
+  }
+
+.videoContainer iframe
+{
+  position:relative;
+  top:180px;
+  left:160px;
+  border:1px solid rgb(205, 9, 0);
+  padding:5px;
+}
+
+.pagination
+{
+  position:relative;
+  top:350px;
+  left:-250px;
+}
+
+.pagination a
+{
+  background-color:pink;
+}
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <div class="Maincontainer">
+ <div class="mainHeader"> 
+      
+	  
+             <h1 id="main1">Every about dance</h1>
+			 <h5 id="main2"> Helping dancers staying inspired... </h5>
+  
+         <div id="navigation">
+		      <ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Learn Dance </a></li>
+				<li><a href="#">Teach Dance</a></li>
+				<li><a href='#'>Dance Quotes</a></li>
+				<li><a href='#'>About</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+         </div>
+	</div>	
+  <div class="videoContainer">
+    <h3> Learn bharathanatyam</h3>
+    <p>Learn Bharatanatyam [Basic Lessons For Beginners] - Natya Vardhini</p>
+    <iframe width="640" height="360" src="//www.youtube.com/embed/K2BIej2kZKE" frameborder="0" allowfullscreen></iframe>
+    
+    
+    <iframe width="640" height="360" src="//www.youtube.com/embed/ecDRZAhoS5w" frameborder="0" allowfullscreen></iframe>
+    
+    <iframe width="640" height="360" src="//www.youtube.com/embed/GgsW-8IGChE" frameborder="0" allowfullscreen></iframe>
+    <iframe width="640" height="360" src="//www.youtube.com/embed/KY5XPNN2Op4" frameborder="0" allowfullscreen></iframe>
+    <ul class="pagination">
+  <li class="disabled"><a href="#">&laquo;</a></li>
+  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+    
+    
+    </div> <!--video Container-->
+  
+
+
+  <div class="footer">
+    <div class="centeredContent">
+      <p>© 2014 by Everything about Dance. </p>
+    </div> <!-- centered content-->
+  </div> <!--footer-->
+    
+    
+  </div> <!--container-->
+<script>
+
+</script>
+</body>
+</html>
