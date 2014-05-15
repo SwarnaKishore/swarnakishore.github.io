@@ -2,7 +2,7 @@
 <html>
 <!--
   Created using jsbin.com
-  Source can be edited via http://jsbin.com/pavuv/1/edit
+  Source can be edited via http://jsbin.com/pavuv/4/edit
 -->
 <head>
   <meta charset="utf-8">
@@ -17,6 +17,9 @@
   <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Sniglet' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
 <style id="jsbin-css">
 body
@@ -73,6 +76,18 @@ position: absolute;
 {
 	list-style-type: none;
 	float: left;
+  position:relative;
+}
+#navigation ul ul
+{
+  display:none;
+}
+
+#navigation ul li:hover > ul
+{
+  display:block;
+  margin:0px;
+  padding:0px;
 }
 
 
@@ -80,13 +95,25 @@ position: absolute;
 {
 	display: block;
 	float: left;
-	padding: 7px 15px;
+  
+	padding: 10px;
     text-decoration: none;
-	color: white;
+	color: rgba(255, 255, 255, 0.8);
   font-family: 'Joti One', cursive;
  
  font-size:17px;
    
+}
+
+#navigation ul li:hover > ul li
+{
+  float:none;
+  display:block;
+}
+
+#navigation ul li:hover > ul li a
+{
+  background-color: rgba(159, 0, 62,1);
 }
 
 
@@ -134,39 +161,64 @@ color:rgb(254, 212, 0);
   margin-left:23%;
   width:980px;
     
-  height:1980px;
+  height:1000px;
   background-color: rgb(159, 0, 62);
 }
-.videoContainer h3,p
+
+.carousel {
+  position: relative;  
+  width: 80%;
+  margin-left:10%;
+  margin-top:20%;
+  height: 40%;
+  margin-bottom:10%;
+  
+}
+.carousel-header
 {
   position:relative;
-  color:rgb(254, 212, 0);
-  left:160px;
-  top:150px;
-  font-family: 'Nova Square', cursive;
-  }
-
-.videoContainer iframe
-{
-  position:relative;
-  top:180px;
-  left:160px;
-  border:1px solid rgb(205, 9, 0);
-  padding:5px;
+  top:175px;
+  font-size:27px;
+  left:100px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Pacifico', cursive;
+  
 }
+.carousel-inner > .item > img{
+       width:100%;
+       height:100%;
+       height:500px;
+  
+     }
 
-.pagination
-{
-  position:relative;
-  top:350px;
-  left:-250px;
-}
 
-.pagination a
-{
-  background-color:pink;
-}
+.btn.btn-mini {
+            background-color: #FCE27B;
+		    color:  rgb(159, 0, 62);;
+            font-size: 12px;
+            text-shadow: none !important;
+            margin-left:10px;
+            margin-bottom:10px;
+  
+            }
+.caption h3 {
+    color: #E5FFCC;
+    line-height: 2rem;
+    margin-left:10px;
+    margin-top:10px;
+  font-family: 'Playfair Display', serif;
+    
+    }
+.caption p {
+        font-size: 16px;
+        line-height: 2rem;
+        margin-left:10px;
+        color: rgba(255, 255, 255, 0.8);
+  font-family: 'Philosopher', sans-serif;
+        }
 
+
+  
 
 
 
@@ -188,7 +240,23 @@ color:rgb(254, 212, 0);
          <div id="navigation">
 		      <ul>
 				<li><a href="#">Home</a></li>
-				<li><a href="#">Learn Dance </a></li>
+				<li><a href="#">Learn Dance </a>
+                   <ul>
+                     <li><a href="#">Indian Classical Dance </a>
+                       <ul>
+                           <li><a href="#">Bharatnatyam</a></li>
+                           <li><a href="#">kathak</a></li>
+                           <li><a href="#">kathakali</a></li>
+                           <li><a href="#">Kuchipudi</a></li> 
+                           <li><a href="#">Manipuri</a></li>
+                           <li><a href="#">Mohiniattyam</a></li>
+                           <li><a href="#">Odissi</a></li>
+                           <li><a href="#">Sattriya</a></li>
+                       </ul>  
+                     </li>
+                     <li><a href="#">Indian folk Dance </a></li>
+                   </ul>  
+                </li>
 				<li><a href="#">Teach Dance</a></li>
 				<li><a href='#'>Dance Quotes</a></li>
 				<li><a href='#'>About</a></li>
@@ -197,25 +265,195 @@ color:rgb(254, 212, 0);
          </div>
 	</div>	
   <div class="videoContainer">
-    <h3> Learn bharathanatyam</h3>
-    <p>Learn Bharatanatyam [Basic Lessons For Beginners] - Natya Vardhini</p>
-    <iframe width="640" height="360" src="//www.youtube.com/embed/K2BIej2kZKE" frameborder="0" allowfullscreen></iframe>
+    <div class="carousel-header">
+  <p>The 8 classical dance styles of India!</p>
+    </div>
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="http://georgandreassuhr.files.wordpress.com/2012/12/bharatnatyam_04.jpg?w=610&h=457" alt="">
+                 
+                    <div class="caption row-fluid">
+                    <div class="span4"><h3>BHARATNATYAM</h3>
+                    
+                    </div>                	
+                	<div class="span8"><p>Bharata Natyam is one of the eight Indian classical dance forms of India. This dance form originated in the temples and courts of southern India. Later it was documented as a performing art in the 19th century by four brothers known as the Tanjore Quartet (musicians). </p>
+                	<a class="btn btn-mini" href="#">&raquo; Read More</a>
+					</div>
+                </div> <!--caption row fliud-->
+                       
+				
+               
+        
+        </div><!--item active-->
+     
+
+      <div class="item">
+        <img src="http://mycityimg.sulekha.com/events/retrospect-kathak-dance/thumbnailfull/retrospect-kathak-dance-2012-7-18-1-54-25.jpg">
+                
+                   <div class="caption row-fluid">
+                    <div class="span4"><h3>KATHAK</h3>
+                    
+                    </div>                	
+                	<div class="span8"><p>This dance form origin from the groups of poets of ancient northern India, known as Kathaks, or story tellers. These poets, performing in village squares and temple courtyards, mostly specialized in recounting mythological and moral tales from the scriptures. </p>
+                	<a class="btn btn-mini" href="#">&raquo; Read More</a>
+					</div>
+                </div>
+                       
+                
+        </div><!--item-->
+      
+      <div class="item">
+        <img src="http://images.jagran.com/inext/Inext_p_lhea__kathakali.jpg">
+                        
+                    <div class="caption row-fluid">
+                    <div class="span4"><h3>KATHAKALI</h3>
+                    
+                    </div>                	
+                	<div class="span8"><p>Kathakali is one of the oldest theatre forms in the world. It originated in the area of southwestern India now known as the state of Kerala. Kathakali is a group presentation, in which dancers take various roles in performances traditionally based on themes from Hindu mythology.</p>
+                	<a class="btn btn-mini" href="#">&raquo; Read More</a>
+					</div>
+                </div>
+                       
+              
+        
+    </div><!--item-->
+      
+      
+      
+      <div class="item">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSn3XLOEb4IllLsMNmiPJQpaxKVEdvUvmNgoJsYCWJNv3EgLSc12w">
+                        
+                    <div class="caption row-fluid">
+                      
+                    <div class="span4"><h3>Kuchipudi</h3>
+                    
+                    </div>                	
+                	<div class="span8"><p>Kuchipudi is one of the well-known Classical Indian Dance form from Andhra Pradesh, India. The name Kuchipudi has origin from the name of a village “KUCHELAPURAM” with resident Brahmins practicing this traditional dance form at Andhra pradesh.</p>
+                	<a class="btn btn-mini" href="#">&raquo; Read More</a>
+					</div>
+                          
+                </div>
+                       
+              
+        
+    </div><!--item-->
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="item">
+        <img src="http://e-pao.org/galleries/images/Arts/Dance/2013/Chandigarh_Fest_02/02_6/Chandigarh_Fest_20130216_6_4.jpg">
+                        
+                    <div class="caption row-fluid">
+                    <div class="span4"><h3>MANIPURI</h3>
+                    
+                    </div>                	
+                	<div class="span8"><p>Manipuri is one of the most beautiful dance styles of India. Nurtured in the mountainous region of the northeast, it takes its name from the name of the place Manipur, which is now a state. Manipur literally means a jewel of a land, and the state is set like a gem in the verdant hills. </p>
+                	<a class="btn btn-mini" href="#">&raquo; Read More</a>
+					</div>
+                </div>
+                       
+              
+        
+    </div><!--item-->
+      
+      
+      
+      
+       <div class="item">
+        <img src="http://georgandreassuhr.files.wordpress.com/2012/12/mohiniattyam-sunanda-nair.jpg?w=610">
+                        
+                    <div class="caption row-fluid">
+                    <div class="span4"><h3>MOHINIATTYAM</h3>
+                    
+                    </div>                	
+                	<div class="span8"><p>The dance form of Mohiniattyam was nurtured in the region of Kerala in southwestern India. The name Mohiniattyam literally means ‘Dance of the Enchantress,’ and it does have a mesmerizing quality.  </p>
+                	<a class="btn btn-mini" href="#">&raquo; Read More</a>
+					</div>
+                </div>
+                       
+              
+        
+    </div><!--item-->
+      
+      
+      
+      
+      
+       
+      <div class="item">
+        <img src="http://colleenashakti.com/news/colleena/uploaded_images/Colleena--Odissi--(4)-798153.jpg">
+                        
+                    <div class="caption row-fluid">
+                    <div class="span4"><h3>Odissi</h3>
+                    
+                    </div>                	
+                	<div class="span8"><p>Odissi has origininated from ancient northern India. The name Odissi refers to the dance style of the state of Orissa in eastern India. Like other classical arts of India Oddisi also face difficulties to survive and by the 1930s and 40s, there were very few surviving practitioners of the art. </p>
+                	<a class="btn btn-mini" href="#">&raquo; Read More</a>
+					</div>
+                </div>
+                       
+              
+        
+    </div><!--item-->
+      
+      
+      
+      
+      
+      
+      
+       <div class="item">
+        <img src="https://thiraseela.com/Admin/Content/ImageGallery/57/image2.jpg">
+                        
+                    <div class="caption row-fluid">
+                    <div class="span4"><h3>SATTRIYA</h3>
+                    
+                    </div>                	
+                	<div class="span8"><p>Sattras are the Vaishnava monasteries in Assam. The saint poet Shankar Deva of the 15th century AD started this institution to bring harmony to the region of Assam through religion, creating forms of dance-dramas, music, painting and collective prayer.  </p>
+                	<a class="btn btn-mini" href="#">&raquo; Read More</a>
+					</div>
+                </div>
+                       
+              
+        
+    </div><!--item-->
+      
+      
+      
+     
+      
+      
+      
+      
+   </div><!--carousel-inner-->
+      
+      <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
     
-    
-    <iframe width="640" height="360" src="//www.youtube.com/embed/ecDRZAhoS5w" frameborder="0" allowfullscreen></iframe>
-    
-    <iframe width="640" height="360" src="//www.youtube.com/embed/GgsW-8IGChE" frameborder="0" allowfullscreen></iframe>
-    <iframe width="640" height="360" src="//www.youtube.com/embed/KY5XPNN2Op4" frameborder="0" allowfullscreen></iframe>
-    <ul class="pagination">
-  <li class="disabled"><a href="#">&laquo;</a></li>
-  <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-  <li><a href="#">2</a></li>
-  <li><a href="#">3</a></li>
-  <li><a href="#">4</a></li>
-  <li><a href="#">5</a></li>
-  <li><a href="#">&raquo;</a></li>
-</ul>
-    
+ 
+    </div>
     
     </div> <!--video Container-->
   
