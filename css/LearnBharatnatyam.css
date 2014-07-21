@@ -118,6 +118,7 @@ font-family: 'Joti One', cursive;
 
 
 
+
 /*#navigation
 {
 
@@ -181,11 +182,11 @@ position: absolute;
 
 .footer
 {
-position: absolute;
+position:absolute;
 width: 100%;
 padding:5px;
-  
-  left:0px;
+top:2990px;  
+left:0px;
   
 }
 
@@ -216,7 +217,7 @@ color:rgb(254, 212, 0);
   margin-left:23%;
   width:980px;
     
-  height:1000px;
+  height:3000px;
   background-color: rgb(159, 0, 62);
 }
 
@@ -245,7 +246,7 @@ color:rgb(254, 212, 0);
 .pagination
 {
   position:relative;
-  top:350px;
+  top:2900px;
   left:-250px;
 }
 
