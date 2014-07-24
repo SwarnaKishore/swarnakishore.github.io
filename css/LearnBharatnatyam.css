@@ -185,7 +185,7 @@ position: absolute;
 position:absolute;
 width: 100%;
 padding:5px;
-top:8990px;  
+top:8890px;  
 left:0px;
   
 }
@@ -218,7 +218,7 @@ color:rgb(254, 212, 0);
   margin-left:23%;
   width:980px;
     
-  height:9000px;
+  height:8900px;
   background-color: rgb(159, 0, 62);
 }
 
@@ -247,7 +247,7 @@ color:rgb(254, 212, 0);
 .pager
 {
   position:absolute;
-  top:8900px;
+  top:8750px;
   left:860px;
 }
 
