@@ -212,7 +212,7 @@ color:rgb(254, 212, 0);
 }
 
 
-.videoContainer
+.videoContainerf
 {
   
   margin-left:23%;
@@ -224,27 +224,42 @@ color:rgb(254, 212, 0);
 
 
 
-
   
-.videoContainer h3
+.videoContainerf h3
 {
   position:relative;
   left:140px;
-  top:190px;
+  top:220px;
   color:rgb(254, 212, 0);
   font-family: 'Nova Square', cursive;
   }
+  
+  
+ .videoContainerf strong{
+ 	color:rgb(254, 212, 0);
+ }
+  
 .TextImgContent
 {
 margin-right: 19%;
 margin-left: -100px;
-text-align: justify;	
+text-align: justify;
+color:rgb(254, 212, 0);
 }
-.videoContainer iframe
+.videoContainerf .TextImgContent p
+{
+	color:rgb(255,255,255);
+	position:relative;
+	top:220px;
+
+	
+}
+
+.videoContainerf iframe
 {
   position:relative;
-  top:180px;
-  left:160px;
+  top:250px;
+  left:220px;
   border:1px solid rgb(205, 9, 0);
   padding:5px;
 }
