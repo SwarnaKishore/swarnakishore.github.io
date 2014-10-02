@@ -9,17 +9,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/jkmegamenu.css" />
 
-<script type="text/javascript" src="js/jkmegamenu.js">
 
-
-</script>
-
-<script type="text/javascript">
-
-//jkmegamenu.definemenu("anchorid", "menuid", "mouseover|click")
-jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
-
-</script>
   <script src="http://code.jquery.com/jquery.min.js"></script>
 <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
@@ -36,6 +26,76 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
   <link href='http://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <script>
+  	/*
+* 
+* Credits to http://css-tricks.com/long-dropdowns-solution/
+*
+*/
+
+var maxHeight = 400;
+
+$(function(){
+
+    $(".nav > li").hover(function() {
+    
+         var $container = $(this),
+             $list = $container.find("ul"),
+             $anchor = $container.find("a"),
+             height = $list.height() * 1.1,       // make sure there is enough room at the bottom
+             multiplier = height / maxHeight;     // needs to move faster if list is taller
+        
+        // need to save height here so it can revert on mouseout            
+        $container.data("origHeight", $container.height());
+        
+        // so it can retain it's rollover color all the while the dropdown is open
+        $anchor.addClass("hover");
+        
+        // make sure dropdown appears directly below parent list item    
+        $list
+            .show()
+            .css({
+                paddingTop: $container.data("origHeight")
+            });
+        
+        // don't do any animation if list shorter than max
+        if (multiplier > 1) {
+            $container
+                .css({
+                    height: maxHeight,
+                    overflow: "hidden"
+                })
+                .mousemove(function(e) {
+                    var offset = $container.offset();
+                    var relativeY = ((e.pageY - offset.top) * multiplier) - ($container.data("origHeight") * multiplier);
+                    if (relativeY > $container.data("origHeight")) {
+                        $list.css("top", -relativeY + $container.data("origHeight"));
+                    };
+                });
+        }
+        
+    }, function() {
+    
+        var $el = $(this);
+        
+        // put things back to normal
+        $el
+            .height($(this).data("origHeight"))
+            .find("ul")
+            .css({ top: 0 })
+            .hide()
+            .end()
+            .find("a")
+            .removeClass("hover");
+    
+    });  
+    
+});
+
+
+
+
+  </script>
 </head>
 <body>
 	<div class="container">
@@ -63,6 +123,50 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
         <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
           
           <ul class="nav navbar-nav">
+          	
+          	
+          	
+          	
+          	
+          	
+           	
+          	  <li class="dropdown">
+              
+              <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Folk Dance <b class="caret"></b></a>
+            
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="LearnBharatnatyam1.html">Bharatnatyam</a> </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="LearnKathak1.html">kathak</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">kathakali</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">kuchipudi</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Manipuri</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mohiniattyam</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Odissi</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sattriya</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="LearnBharatnatyam1.html">Bharatnatyam</a> </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="LearnKathak1.html">kathak</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">kathakali</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">kuchipudi</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Manipuri</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mohiniattyam</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Odissi</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sattriya</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="LearnBharatnatyam1.html">Bharatnatyam</a> </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="LearnKathak1.html">kathak</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">kathakali</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">kuchipudi</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Manipuri</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mohiniattyam</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Odissi</a></li>
+                 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sattriya</a></li>
+                </ul><!--dropdown-menu-->
+                
+                
+                
+            </li><!--dropdown-->
+           
+         
+         
             
             <li class="dropdown">
               
@@ -86,73 +190,6 @@ jkmegamenu.definemenu("megaanchor", "megamenu1", "mouseover")
             
             
               
-            
-            
-            <li class="dropdown">
-              
-              <a href="#" id="megaanchor" role="button" class="dropdown-toggle" data-toggle="dropdown">Folk Dance <b class="caret"></b></a>
-              
-             <div id="megamenu1" class="megamenu">
-
-<div class="column">
-	<ul>
-	<li><a href="UttarPradeshDances.html">Uttar Pradesh</a></li>
-	<li><a href="#">Gujarat</a></li>
-	<li><a href="#">Goa</a></li>
-	<li><a href="#">Andhra Pradesh</a></li>
-	<li><a href="#">Maharashtra</a></li>
-	<li><a href="#">Madhya Pradesh</a></li>
-	</ul>
-</div>
-
-<!--/*<br style="clear: left" /> --Break after 3rd column. Move this if desired-->           
-
-<div class="column">
-	<ul>
-		
-	<li><a href="#">Chattisgarh</a></li>
-	<li><a href="#">Bihar</a></li>
-	<li><a href="#">Orissa</a></li>
-	<li><a href="#">Assam</a></li>
-	<li><a href="#">Tripura</a></li>
-	<li><a href="#">Manipur</a></li>
-	</ul>
-</div>
-
-<br style="clear:left"/>
-
-<div class="column">
-	
-	<ul>
-	<li><a href="#">West Bengal</a></li>
-	<li><a href="#">Jammu & Kashmir</a></li>
-	<li><a href="#">Himachal & Uttaranchal</a></li>
-	<li><a href="#">Punjab</a></li>
-	<li><a href="#">Haryana</a></li>
-	<li><a href="#">Arunachal Pradesh </a></li>
-	</ul>
-</div>
-<div class="column">
-	<ul>
-	<li><a href="#">Jharkand</a></li>
-	<li><a href="#">Tamil Nadu</a></li>
-	<li><a href="#">Karnataka</a></li>
-	<li><a href="">Rajasthan</a></li>
-	<li><a href="#">Kerala</a></li>
-	
-	</ul>
-</div>
-
-
-</div>
-              
-            </li><!--dropdown-->
-           
-            
-            
-            
-            
-            
             
             <li class="dropdown">
               <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown">Teach Dance <b class="caret"></b></a>
