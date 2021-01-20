@@ -304,8 +304,8 @@ which is based on Google Material Design</p>
   <footer class="page-footer grey darken-3">
    
     <div class="footer-copyright grey darken-3">
-      <div class="container">
-       <p></p>
+      <div class="container copyright">
+       <p>Copyright © <a href="http://swarnakishore.github.io/">Portfolio</a> <span id="year"></span></p>
       </div>
     </div>
   </footer>
@@ -324,6 +324,9 @@ which is based on Google Material Design</p>
         $('.parallax').parallax();
       
   });
+
+    var dt = new Date();
+    document.getElementById("year").innerHTML = dt.getFullYear();
   </script>
 <script>
   	    $('.head-link').click(function(e) {

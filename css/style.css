@@ -11,6 +11,11 @@
 .social-icons .fa {
 	font-size: 2.4em;
 }
+.copyright {
+	text-align: center;
+    position: relative;
+    bottom: 10px;
+}
 /*Change icons circle size and color here*/
 .social-icons .fa {
 	width: 50px;
