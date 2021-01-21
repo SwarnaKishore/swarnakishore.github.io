@@ -39,7 +39,10 @@
 
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
+
+    var dt = new Date();
+    document.getElementById("year").innerHTML = dt.getFullYear();
 
     // Collapse Navbar
     var navbarCollapse = function () {
