@@ -460,3 +460,10 @@
     color: white;
     font-size: 18px;
   }
+
+  .react-skill {
+    background: #282c34;
+    font-weight: 400;
+    color: #61dafb;
+    font-size: 18px;
+  }
