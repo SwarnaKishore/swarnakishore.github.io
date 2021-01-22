@@ -453,3 +453,10 @@
   .profile-icons:hover {
     color: #fed136;
   }
+
+  .angular-skill {
+    background: #1976d2;
+    font-weight: 400;
+    color: white;
+    font-size: 18px;
+  }
