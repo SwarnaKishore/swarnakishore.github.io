@@ -473,3 +473,9 @@
     color: #61dafb;
     font-size: 18px;
   }
+
+  @media (min-width: 768px) {
+    .col-md-11 {
+        max-width: 84.666667% !important;
+    }
+}
