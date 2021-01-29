@@ -9980,6 +9980,10 @@ p {
   line-height: 1.75;
 }
 
+#education {
+  padding: 2rem 0 !important;
+}
+
 .page-section {
   padding: 6rem 0;
 }
