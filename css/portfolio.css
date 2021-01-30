@@ -474,6 +474,13 @@
     font-size: 18px;
   }
 
+  .bootstrap-skill {
+    color: #7952b3;
+    border: 1px solid #7952b3; 
+    font-weight: inherit;
+    padding: 5px;
+  }
+
   @media (min-width: 768px) {
     .col-md-11 {
         max-width: 84.666667% !important;
