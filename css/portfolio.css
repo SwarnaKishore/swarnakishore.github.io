@@ -481,6 +481,19 @@
     padding: 5px;
   }
 
+  .html-skill {
+    color: #e96229;
+    border: 1px solid #e96229; 
+    font-weight: inherit;
+    padding: 5px;
+  }
+
+  .html-text {
+    font-size: 13px;
+    position: relative;
+    bottom: 4px;
+  }
+
   @media (min-width: 768px) {
     .col-md-11 {
         max-width: 84.666667% !important;
