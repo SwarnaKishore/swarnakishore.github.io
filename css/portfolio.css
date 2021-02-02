@@ -486,12 +486,25 @@
     border: 1px solid #e96229; 
     font-weight: inherit;
     padding: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
   }
 
   .html-text {
     font-size: 13px;
     position: relative;
     bottom: 4px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .css-skill {
+    color: #28a5d1;
+    border: 1px solid #28a5d1; 
+    font-weight: inherit;
+    padding: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
   }
 
   @media (min-width: 768px) {
