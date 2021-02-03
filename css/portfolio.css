@@ -461,17 +461,21 @@
   }
 
   .angular-skill {
-    background: #1976d2;
     font-weight: 400;
-    color: white;
-    font-size: 18px;
+    border: 1px solid #1976d2;
+    color: #1976d2;
+    font-size: 14px;
+    position: relative;
+    bottom: 3px;
   }
 
   .react-skill {
-    background: #282c34;
+    /* background: #282c34; */
     font-weight: 400;
-    color: #61dafb;
-    font-size: 18px;
+    /* color: #61dafb; */
+    color: #0db3e0;
+    border: 1px solid #0db3e0;
+    font-size: 14px;
   }
 
   .bootstrap-skill {
@@ -479,6 +483,8 @@
     border: 1px solid #7952b3; 
     font-weight: inherit;
     padding: 5px;
+    position: relative;
+    bottom: 3px;
   }
 
   .html-skill {
@@ -531,6 +537,8 @@
     padding: 5px;
     padding-right: 7px;
     padding-left: 7px; 
+    position: relative;
+    bottom: 5px;
   }
 
   @media (min-width: 768px) {
