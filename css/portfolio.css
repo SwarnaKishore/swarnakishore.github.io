@@ -464,9 +464,38 @@
     font-weight: 400;
     border: 1px solid #1976d2;
     color: #1976d2;
+    font-size: 13px;
+    position: relative;
+    bottom: 3px;
+  }
+
+  .dotnet-skill {
+    font-weight: 400;
+    border: 1px solid #661d75;
+    color: #661d75;
     font-size: 14px;
     position: relative;
     bottom: 3px;
+    padding: 8px;
+  }
+
+  .mongodb-skill {
+    font-weight: 400;
+    border: 1px solid #439934;
+    color: #439934;
+    font-size: 14px;
+    position: relative;
+    bottom: 3px;
+  }
+
+  .web-api-skill {
+    font-weight: 400;
+    border: 1px solid #0184c8;
+    color: #0184c8;
+    font-size: 14px;
+    position: relative;
+    bottom: 3px;
+    padding: 8px;
   }
 
   .react-skill {
@@ -484,6 +513,26 @@
     font-weight: inherit;
     padding: 5px;
     position: relative;
+    bottom: 5px;
+  }
+
+  .ionic-skill {
+    color: #347bf6;
+    border: 1px solid #347bf6; 
+    font-weight: inherit;
+    padding: 2px;
+    padding-right: 6px;
+    position: relative;
+    bottom: 5px;
+  }
+  .csharp-skill {
+    color: #7952b3;
+    border: 1px solid #7952b3; 
+    font-weight: inherit;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
     bottom: 3px;
   }
 
@@ -491,9 +540,19 @@
     color: #e96229;
     border: 1px solid #e96229; 
     font-weight: inherit;
-    padding: 5px;
+    padding: 4px;
     padding-right: 7px;
     padding-left: 7px;
+  }
+
+
+  .meteor-skill {
+    color: #df504f;
+    border: 1px solid #df504f; 
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    bottom: 3px;
   }
 
   .html-text {
@@ -515,6 +574,15 @@
   .css-skill {
     color: #28a5d1;
     border: 1px solid #28a5d1; 
+    font-weight: inherit;
+    padding: 4px;
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  .sql-skill {
+    color: #0275cf;
+    border: 1px solid #0275cf; 
     font-weight: inherit;
     padding: 5px;
     padding-right: 7px;
@@ -545,4 +613,17 @@
     .col-md-11 {
         max-width: 84.666667% !important;
     }
+}
+
+.mt-3 {
+  margin-top: 3% !important;
+}
+
+.mt-1 {
+  margin-top: 1% !important;
+}
+
+.supporting-text {
+  font-size: 1rem;
+  font-weight: 600;
 }
