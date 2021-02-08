@@ -627,3 +627,26 @@
   font-size: 1rem;
   font-weight: 600;
 }
+
+@media  (max-width: 767px) {
+  .heading {
+    position: relative;
+    top: 81px;
+    font-size: 3rem;
+  }
+  
+  .sub-heading {
+    position: relative;
+      top: 62px;
+      font-size: 16px;
+  }
+  
+  .social-icons {
+    position: relative;
+    top: 62px;
+  }
+}
+
+.badge-pill {
+  margin-top: 3px;
+}
