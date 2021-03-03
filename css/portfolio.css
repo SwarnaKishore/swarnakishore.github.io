@@ -657,3 +657,7 @@
 .card {
   border: none !important;
 }
+
+.margin-top-2 {
+  margin-top: 2%;
+}
