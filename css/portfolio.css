@@ -524,6 +524,28 @@
     position: relative;
     bottom: 5px;
   }
+
+
+  .jquery-skill {
+    color: #1166a7;
+    border: 1px solid #1166a7; 
+    font-weight: inherit;
+    padding: 4px;
+    padding-right: 6px;
+    position: relative;
+    bottom: 5px;
+  }
+
+  .redux-skill {
+    color: #764abc;
+    border: 1px solid #764abc; 
+    font-weight: inherit;
+    padding: 4px;
+    padding-right: 6px;
+    position: relative;
+    bottom: 5px;
+  }
+
   .csharp-skill {
     color: #7952b3;
     border: 1px solid #7952b3; 
