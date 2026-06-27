@@ -245,7 +245,6 @@ a:hover {
 
 .expertise-card,
 .project-card,
-.role-card,
 .contact-card {
     background: #fff;
     border: 1px solid var(--line);
@@ -263,17 +262,14 @@ a:hover {
 }
 
 .expertise-card h3,
-.project-card h3,
-.role-card h3 {
+.project-card h3 {
     margin-bottom: 0.65rem;
     font-size: 1.12rem;
     font-weight: 800;
 }
 
 .expertise-card p,
-.project-card p,
-.role-card p,
-.role-card li {
+.project-card p {
     color: var(--muted);
     line-height: 1.65;
 }
@@ -293,44 +289,6 @@ a:hover {
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 700;
-}
-
-.timeline-list {
-    display: grid;
-    gap: 1rem;
-}
-
-.role-card {
-    padding: 1.5rem;
-}
-
-.role-header {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.role-header p {
-    margin-bottom: 0;
-    color: var(--teal);
-    font-weight: 700;
-}
-
-.role-header span {
-    flex: 0 0 auto;
-    color: var(--gold);
-    font-size: 0.9rem;
-    font-weight: 800;
-}
-
-.role-card ul {
-    margin-bottom: 0;
-    padding-left: 1.1rem;
-}
-
-.compact-role p:last-child {
-    margin-bottom: 0;
 }
 
 .project-grid {
@@ -480,12 +438,7 @@ a:hover {
         font-size: 3.15rem;
     }
 
-    .role-header,
     .footer-content {
         flex-direction: column;
-    }
-
-    .role-header span {
-        align-self: flex-start;
     }
 }
