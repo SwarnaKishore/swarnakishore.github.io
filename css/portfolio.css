@@ -29,6 +29,7 @@ a:hover {
     color: #0b5f59;
 }
 
+/* ── Nav ── */
 #mainNav {
     padding: 1rem 0;
     background: rgba(16, 32, 51, 0.96);
@@ -61,6 +62,7 @@ a:hover {
     color: #fff;
 }
 
+/* ── Hero ── */
 .masthead {
     min-height: 92vh;
     display: flex;
@@ -72,9 +74,7 @@ a:hover {
         url("../assets/img/light-background.jpeg") center / cover no-repeat;
 }
 
-.hero-grid,
-.contact-grid,
-.credentials-grid {
+.hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
     gap: 2rem;
@@ -110,9 +110,9 @@ a:hover {
     max-width: 760px;
     margin-bottom: 1rem;
     color: #f6fbfb;
-    font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+    font-size: clamp(1.15rem, 2.2vw, 1.6rem);
     font-weight: 600;
-    line-height: 1.35;
+    line-height: 1.4;
 }
 
 .hero-summary {
@@ -176,6 +176,7 @@ a:hover {
     background: rgba(255, 255, 255, 0.14);
 }
 
+/* Hero panel */
 .hero-panel {
     display: grid;
     gap: 1rem;
@@ -186,27 +187,37 @@ a:hover {
     backdrop-filter: blur(10px);
 }
 
-.hero-panel div {
+.hero-stat {
     padding: 1rem;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 8px;
 }
 
 .metric,
-.metric-label {
+.metric-label,
+.metric-icon {
     display: block;
 }
 
 .metric {
     font-size: 2rem;
     font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.metric-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.35rem;
+    opacity: 0.9;
 }
 
 .metric-label {
     color: rgba(255, 255, 255, 0.76);
+    font-size: 0.9rem;
     line-height: 1.55;
 }
 
+/* ── Sections ── */
 .page-section {
     padding: 5.5rem 0;
 }
@@ -236,23 +247,18 @@ a:hover {
     line-height: 1.75;
 }
 
-.expertise-grid,
-.project-grid {
+/* ── Expertise ── */
+.expertise-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 
-.expertise-card,
-.project-card,
-.contact-card {
+.expertise-card {
+    padding: 1.35rem;
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 8px;
-}
-
-.expertise-card {
-    padding: 1.35rem;
 }
 
 .expertise-card i {
@@ -261,17 +267,16 @@ a:hover {
     font-size: 1.5rem;
 }
 
-.expertise-card h3,
-.project-card h3 {
+.expertise-card h3 {
     margin-bottom: 0.65rem;
     font-size: 1.12rem;
     font-weight: 800;
 }
 
-.expertise-card p,
-.project-card p {
+.expertise-card p {
     color: var(--muted);
     line-height: 1.65;
+    margin: 0;
 }
 
 .skill-cloud {
@@ -291,11 +296,17 @@ a:hover {
     font-weight: 700;
 }
 
+/* ── Projects ── */
 .project-grid {
+    display: grid;
     grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    gap: 1rem;
 }
 
 .project-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -304,12 +315,25 @@ a:hover {
     aspect-ratio: 16 / 10;
     object-fit: cover;
     border-bottom: 1px solid var(--line);
+    display: block;
 }
 
 .project-content {
     padding: 1.45rem;
 }
 
+.project-card h3 {
+    margin-bottom: 0.65rem;
+    font-size: 1.12rem;
+    font-weight: 800;
+}
+
+.project-card p {
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+/* Featured project */
 .featured-project {
     color: #fff;
     background: var(--navy);
@@ -323,23 +347,78 @@ a:hover {
 
 .featured-project ul {
     padding-left: 1.1rem;
+    margin-bottom: 0;
+}
+
+.featured-project ul li {
+    margin-bottom: 0.35rem;
+}
+
+/* Placeholder shown until a real screenshot is added */
+.featured-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 2.5rem 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.featured-placeholder i {
+    font-size: 2.5rem;
+    opacity: 0.45;
+}
+
+/* Once you add a real screenshot, uncomment the <img> in HTML and remove .featured-placeholder */
+.featured-img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    display: block;
 }
 
 .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: center;
     margin-top: 1rem;
 }
 
 .project-links a {
     color: var(--teal);
     font-weight: 800;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
 }
 
 .featured-project .project-links a {
     color: #f4b66d;
 }
 
+/* ── Credentials ── */
 .credentials-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: 2rem;
     align-items: start;
+}
+
+.credentials-sub {
+    color: var(--muted);
+    margin-top: 0.5rem;
+    font-size: 1rem;
 }
 
 .credential-list {
@@ -349,17 +428,33 @@ a:hover {
 
 .credential-list p {
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 1.1rem;
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 8px;
-    color: var(--muted);
-    font-weight: 600;
+    color: var(--ink);
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-.credential-list i {
+.credential-list p strong {
+    color: var(--ink);
+}
+
+.credential-list .fas,
+.credential-list .fab {
     color: var(--coral);
     margin-right: 0.5rem;
+    width: 16px;
+    text-align: center;
+}
+
+/* ── Contact ── */
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: 2rem;
+    align-items: center;
 }
 
 .contact-section {
@@ -371,6 +466,10 @@ a:hover {
     color: #f4b66d;
 }
 
+.contact-section h2 {
+    color: #fff;
+}
+
 .contact-section p {
     color: rgba(255, 255, 255, 0.78);
 }
@@ -380,7 +479,8 @@ a:hover {
     gap: 0.75rem;
     padding: 1.25rem;
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
 }
 
 .contact-card a {
@@ -397,8 +497,10 @@ a:hover {
 
 .contact-card a:hover {
     background: rgba(255, 255, 255, 0.16);
+    color: #fff;
 }
 
+/* ── Footer ── */
 .footer {
     background: #0b1521;
     color: rgba(255, 255, 255, 0.72);
@@ -414,6 +516,7 @@ a:hover {
     color: #fff;
 }
 
+/* ── Responsive ── */
 @media (max-width: 991px) {
     .hero-grid,
     .contact-grid,
