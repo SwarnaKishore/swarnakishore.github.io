@@ -195,7 +195,8 @@ a:hover {
 
 .metric,
 .metric-label,
-.metric-icon {
+.metric-icon,
+.hero-stat-label {
     display: block;
 }
 
@@ -209,6 +210,51 @@ a:hover {
     font-size: 1.4rem;
     margin-bottom: 0.35rem;
     opacity: 0.9;
+}
+
+.hero-stat-label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 0.5rem;
+}
+
+.hero-stat-label i {
+    margin-right: 0.35rem;
+    font-size: 0.75rem;
+}
+
+.hero-stack-tiers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.stack-tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 0.25rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.stack-tier i {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.stack-tier span {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .metric-label {
@@ -259,13 +305,49 @@ a:hover {
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 8px;
+    border-top: 3px solid var(--teal);
+}
+
+/* per-discipline top border colors */
+.expertise-frontend { border-top-color: var(--teal); }
+.expertise-backend  { border-top-color: var(--navy); }
+.expertise-cloud    { border-top-color: var(--gold); }
+.expertise-ai       { border-top-color: var(--coral); }
+
+/* category badge */
+.expertise-badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+}
+
+.expertise-frontend .expertise-badge { background: #e8f3f1; color: #0a5c55; }
+.expertise-backend  .expertise-badge { background: #e2eaf2; color: #102033; }
+.expertise-cloud    .expertise-badge { background: #fdf3dc; color: #7a5200; }
+.expertise-ai       .expertise-badge { background: #faeae4; color: #a84323; }
+
+.expertise-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
 }
 
 .expertise-card i {
-    margin-bottom: 1rem;
-    color: var(--teal);
-    font-size: 1.5rem;
+    font-size: 1.15rem;
+    display: inline;
+    margin-bottom: 0;
 }
+
+.expertise-frontend i { color: var(--teal); }
+.expertise-backend  i { color: var(--navy); }
+.expertise-cloud    i { color: var(--gold); }
+.expertise-ai       i { color: var(--coral); }
 
 .expertise-card h3 {
     margin-bottom: 0.65rem;
